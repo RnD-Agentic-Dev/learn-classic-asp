@@ -1,0 +1,28 @@
+@{
+    var driveLetters = ViewBag.DriveLetters as List<string>;
+}
+
+<h1>File System Object (FSO) - List folder and file</h1>
+Read Drive Letter
+@if (driveLetters != null)
+{
+    @foreach (var drive in driveLetters)
+    {
+        @drive<br/>
+    }
+}
+<hr/>
+
+Read Folder <br/>
+URL : @ViewBag.FolderPath<br/>
+Path : @ViewBag.FolderPath<br/>
+size : @ViewBag.FolderSize<br/>
+created : @ViewBag.FolderCreated<br/>
+
+<hr/>
+
+Read File <br/>
+URL : @ViewBag.FilePath<br/>
+Path : @ViewBag.FilePath<br/>
+size : @ViewBag.FileSize<br/>
+created : @ViewBag.FileCreated<br/>

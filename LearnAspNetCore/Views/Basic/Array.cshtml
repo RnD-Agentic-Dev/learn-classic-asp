@@ -1,0 +1,30 @@
+<h1>Array</h1>
+@{
+    string[] namesSplit = ViewBag.NamesSplit;
+    string[] cars = ViewBag.Cars;
+}
+<h3>Fruits</h3>
+<p>@namesSplit[0]</p>
+<p>@namesSplit[1]</p>
+<p>@namesSplit[2]</p>
+<p>@namesSplit[3]</p>
+<hr/>
+<h3>Cars</h3>
+<p>@cars[0]</p>
+<p>@cars[1]</p>
+<p>@cars[2]</p>
+<p>@cars[3]</p>
+
+<hr/>
+<h3>Names</h3>
+@for (int i = 0; i < namesSplit.Length; i++)
+{
+    <p>@namesSplit[i]</p>
+}
+
+<hr/>
+<h3>Cars</h3>
+@for (int i = 0; i < cars.Length; i++)
+{
+    <p>@cars[i]</p>
+}

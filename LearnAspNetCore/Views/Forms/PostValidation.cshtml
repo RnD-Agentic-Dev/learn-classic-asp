@@ -1,0 +1,30 @@
+@model LearnAspNetCore.Models.FormViewModel
+
+<h1>Form POST</h1>
+
+<form method="POST" asp-controller="Forms" asp-action="PostValidation">
+    Title<br/>
+    <input type="text" name="title" placeholder="title"/>
+    <i>@Model.TitleMessage</i>
+    <br/>
+    Content<br/>
+    <textarea name="content" placeholder="content"></textarea>
+    <i>@Model.ContentMessage</i>
+    <br/>
+    Category :
+    <input type="checkbox" name="category" value="news"/> News
+    <input type="checkbox" name="category" value="event" /> Event <br/>
+    Status :
+    <input type="radio" name="status" value="published"/> Published
+    <input type="radio" name="status" value="draft" /> Draft <br/><br/>
+    <input type="submit" name="submit" value="Submit" />
+</form>
+
+<hr/>
+
+<h1>Form POST Response</h1>
+
+Title : @Model.Title <br/>
+Content : @Model.Content <br/>
+Category : @Model.Category <br/>
+Status : @Model.Status <br/>

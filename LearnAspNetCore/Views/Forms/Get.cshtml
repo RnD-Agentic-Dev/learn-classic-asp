@@ -1,0 +1,26 @@
+@model LearnAspNetCore.Models.FormViewModel
+
+<h1>Form GET</h1>
+
+<form method="GET" asp-controller="Forms" asp-action="Get">
+    Title<br/>
+    <input type="text" name="title" placeholder="title"/> <br/>
+    Content<br/>
+    <textarea name="content" placeholder="content"></textarea> <br/>
+    Category :
+    <input type="checkbox" name="category" value="news"/> News
+    <input type="checkbox" name="category" value="event" /> Event <br/>
+    Status :
+    <input type="radio" name="status" value="published"/> Published
+    <input type="radio" name="status" value="draft" /> Draft <br/><br/>
+    <button>Submit</button>
+</form>
+
+<hr/>
+
+<h1>Form GET Response</h1>
+
+Title : @Model.Title <br/>
+Content : @Model.Content <br/>
+Category : @Model.Category <br/>
+Status : @Model.Status <br/>

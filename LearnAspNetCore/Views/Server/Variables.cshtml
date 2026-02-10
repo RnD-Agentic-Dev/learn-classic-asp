@@ -1,0 +1,19 @@
+@{
+    var serverVariables = ViewBag.ServerVariables as Dictionary<string, string>;
+}
+
+<h1>Server Variable</h1>
+<table class="uk-table uk-table-divider">
+    <tbody>
+        @if (serverVariables != null)
+        {
+            @foreach (var item in serverVariables)
+            {
+                <tr>
+                    <td>@item.Key</td>
+                    <td>@item.Value</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

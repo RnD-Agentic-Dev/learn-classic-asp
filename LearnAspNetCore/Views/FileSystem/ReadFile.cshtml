@@ -1,0 +1,17 @@
+@{
+    var lines = ViewBag.Lines as List<string[]>;
+}
+
+<h1>Read File</h1>
+
+Reading file @ViewBag.FileName<br/><br/>
+@if (lines != null)
+{
+    @foreach (var parts in lines)
+    {
+        if (parts.Length >= 2)
+        {
+            @parts[0]@:: @parts[1]<br/>
+        }
+    }
+}

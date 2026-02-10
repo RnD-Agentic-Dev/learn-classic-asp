@@ -1,0 +1,15 @@
+<h1>Function</h1>
+@{
+    void SayHello(string name)
+    {
+        @:<p>Hello @name</p>
+    }
+
+    string PrintHello(string name)
+    {
+        return $"<p>Hello {name}</p>";
+    }
+}
+
+@{ SayHello("Michael"); }
+@Html.Raw(PrintHello("Michaelsss"))
