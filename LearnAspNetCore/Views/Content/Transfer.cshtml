@@ -1,0 +1,10 @@
+<h1>Transfer page</h1>
+<p>@ViewBag.TransferNote</p>
+<hr/>
+<h1>Conditional</h1>
+@{
+    int temperature = ViewBag.Temperature;
+    string message = ViewBag.Message;
+}
+@Html.Raw($"temperature {temperature}")
+@Html.Raw(message)

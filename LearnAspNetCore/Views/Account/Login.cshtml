@@ -1,0 +1,23 @@
+@model LearnAspNetCore.Models.LoginViewModel
+
+<h1>Login</h1>
+
+@if (!Model.IsLoggedIn)
+{
+    <form method="POST" asp-controller="Account" asp-action="Login">
+        Username<br/>
+        <input type="text" name="username" placeholder="username"/> <br/>
+        Password<br/>
+        <input type="password" name="password" placeholder="password"/> <br/>
+        <input type="submit" name="submit" value="Login" />
+        <br/>
+        <i>@Html.Raw(Model.Message)</i>
+    </form>
+}
+else
+{
+    <form method="POST" asp-controller="Account" asp-action="Login">
+        Hello @Model.CurrentUser
+        <input type="submit" name="submit" value="Logout" />
+    </form>
+}

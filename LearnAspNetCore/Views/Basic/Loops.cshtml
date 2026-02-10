@@ -1,0 +1,32 @@
+<h1>Loops</h1>
+@for (int i = 0; i <= 5; i++)
+{
+    <p>This is my first text</p>
+}
+<hr/>
+@for (int i = 0; i <= 5; i += 2)
+{
+    <p>This is my second text</p>
+}
+<hr/>
+@for (int i = 0; i <= 5; i++)
+{
+    <p>Current text index is @i</p>
+}
+<hr/>
+@{
+    int index4 = 0;
+    while (index4 < 6)
+    {
+        <p>Current text index is @index4</p>
+        index4++;
+    }
+}
+<hr/>
+@for (int row = 0; row <= 1; row++)
+{
+    for (int col = 0; col <= 1; col++)
+    {
+        <p>Table row:@row col:@col</p>
+    }
+}
