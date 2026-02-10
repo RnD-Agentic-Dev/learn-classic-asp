@@ -57,13 +57,16 @@ public class AccountController : Controller
             if (string.IsNullOrEmpty(password))
                 message += "password is required <br/>";
 
-            if (username != "user" || password != "user")
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
             {
-                message += "username or password is wrong";
-            }
-            else
-            {
-                HttpContext.Session.SetString("currentUser", username);
+                if (username != "user" || password != "user")
+                {
+                    message += "username or password is wrong";
+                }
+                else
+                {
+                    HttpContext.Session.SetString("currentUser", username);
+                }
             }
         }
 
